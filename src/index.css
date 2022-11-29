@@ -1,0 +1,97 @@
+:root {
+  --colorbor: white;
+  --colormain: #54c7fc;
+  --colorbody: yellow;
+  margin: 0 auto;
+}
+body {
+  margin: 0;
+  border: 0;
+  display: block;
+  background-color: var(--colorbor) !important;
+  font-size: 150% !important;
+  color: var(--colormain);
+}
+* {
+  box-sizing: border-box;
+  font-family: "Courgette" !important;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap !important;
+  align-items: center;
+  background-color: var(--colormain) !important;
+  color: #fff;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 20px !important;
+}
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#mainPart {
+  padding: 10px !important;
+  height: 90vh;
+}
+form {
+  width: 80%;
+}
+
+input {
+  width: 60%;
+  height: 10%;
+}
+#footerEl {
+  display: flex;
+  justify-content: right;
+  background-color: var(--colormain);
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+footer {
+  padding: 1%;
+  color: var(--colorbody);
+}
+
+.card {
+  margin: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    padding: 5 !important;
+    font-size: small;
+    justify-content: center flex-start;
+  }
+  nav li {
+    margin: 5px !important;
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    padding: 5 !important;
+    font-size: small;
+    justify-content: center;
+  }
+  nav li {
+    justify-content: space-around;
+    margin: 5px !important;
+    font-size: medium;
+  }
+  .card {
+    margin: 5px !important;
+  }
+}

@@ -1,0 +1,51 @@
+#customerTitle {
+  text-align: center;
+}
+
+#buttonPanel {
+  text-align: center;
+  font-size: medium;
+  margin: 50px 0;
+}
+
+.pan {
+  margin: 5px;
+}
+
+select[name="esrbRating"] {
+  margin: 0 50px;
+}
+
+#table-game,
+#table-console,
+#table-invoice,
+#table-tshirt {
+  text-align: left;
+  width: 100%;
+}
+
+#table-game td,
+#table-console td,
+#table-invoice td,
+#table-tshirt td,
+#table-game th,
+#table-console th,
+#table-invoice th,
+#table-tshirt th {
+  border: 1px solid;
+  padding: 5px;
+}
+
+#deleteButton {
+  margin: 0 10px 0 0;
+}
+label {
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.btn {
+  margin: 0 10px 0 10px;
+}

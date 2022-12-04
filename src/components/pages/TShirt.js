@@ -14,7 +14,7 @@ function TShirt() {
   const [error, setError] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:8080/t-shirt")
+    fetch("https://gamestore-microservice-app.herokuapp.com/t-shirt")
       .then((response) => response.json())
       .then((result) => setTShirts(result))
       .catch(console.log);
@@ -24,7 +24,7 @@ function TShirt() {
     if (evt.target.value === "") {
       setTShirts([]);
     } else {
-      fetch("http://localhost:8080/t-shirt/size/" + evt.target.value)
+      fetch("https://gamestore-microservice-app.herokuapp.com/t-shirt/size/" + evt.target.value)
         .then((response) => response.json())
         .then((result) => setTShirts(result))
         .catch(console.log);
@@ -35,7 +35,7 @@ function TShirt() {
     if (evt.target.value === "") {
       setTShirts([]);
     } else {
-      fetch("http://localhost:8080/t-shirt/color/" + evt.target.value)
+      fetch("https://gamestore-microservice-app.herokuapp.com/t-shirt/color/" + evt.target.value)
         .then((response) => response.json())
         .then((result) => setTShirts(result))
         .catch(console.log);
@@ -83,7 +83,7 @@ function TShirt() {
         return;
       case "add-invoice":
         setInvoice(invoice);
-        fetch("http://localhost:8080/t-shirt")
+        fetch("https://gamestore-microservice-app.herokuapp.com/t-shirt")
           .then((response) => response.json())
           .then((result) => setTShirts(result))
           .catch(console.log);
@@ -106,7 +106,7 @@ function TShirt() {
   }
 
   return (
-    <>
+    <div className="container-fluid col-12">
       <div id="buttonPanel" className="row mt-2">
         <div>
           <button
@@ -167,7 +167,7 @@ function TShirt() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 export default TShirt;

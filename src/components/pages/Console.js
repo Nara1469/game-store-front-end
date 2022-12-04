@@ -14,7 +14,7 @@ function Console() {
   const [error, setError] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:8080/console")
+    fetch("https://gamestore-microservice-app.herokuapp.com/console")
       .then((response) => response.json())
       .then((result) => setConsoles(result))
       .catch(console.log);
@@ -24,7 +24,7 @@ function Console() {
     if (evt.target.value === "") {
       setConsoles([]);
     } else {
-      fetch("http://localhost:8080/console/manufacturer/" + evt.target.value)
+      fetch("https://gamestore-microservice-app.herokuapp.com/console/manufacturer/" + evt.target.value)
         .then((response) => response.json())
         .then((result) => setConsoles(result))
         .catch(console.log);
@@ -72,7 +72,7 @@ function Console() {
         return;
       case "add-invoice":
         setInvoice(invoice);
-        fetch("http://localhost:8080/console")
+        fetch("https://gamestore-microservice-app.herokuapp.com/console")
         .then((response) => response.json())
         .then((result) => setConsoles(result))
         .catch(console.log);

@@ -8,7 +8,7 @@ function Invoice() {
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8080/invoice")
+    fetch("https://gamestore-microservice-app.herokuapp.com/invoice")
       .then((response) => response.json())
       .then((result) => setInvoices(result))
       .catch(console.log);
@@ -16,12 +16,12 @@ function Invoice() {
 
   function fetchByCustomerName() {
     if (searchInput === "") {
-      fetch("http://localhost:8080/invoice")
+      fetch("https://gamestore-microservice-app.herokuapp.com/invoice")
         .then((response) => response.json())
         .then((result) => setInvoices(result))
         .catch(console.log);
     } else {
-      fetch("http://localhost:8080/invoice/customerName/" + searchInput)
+      fetch("https://gamestore-microservice-app.herokuapp.com/invoice/customerName/" + searchInput)
         .then((response) => response.json())
         .then((result) => setInvoices(result))
         .catch(console.log);

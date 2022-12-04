@@ -14,7 +14,7 @@ function Game() {
   const [error, setError] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:8080/game")
+    fetch("https://gamestore-microservice-app.herokuapp.com/game")
       .then((response) => response.json())
       .then((result) => setGames(result))
       .catch(console.log);
@@ -24,7 +24,7 @@ function Game() {
     if (evt.target.value === "") {
       setGames([]);
     } else {
-      fetch("http://localhost:8080/game/title/" + evt.target.value)
+      fetch("https://gamestore-microservice-app.herokuapp.com/game/title/" + evt.target.value)
         .then((response) => response.json())
         .then((result) => setGames(result))
         .catch(console.log);
@@ -35,7 +35,7 @@ function Game() {
     if (evt.target.value === "") {
       setGames([]);
     } else {
-      fetch("http://localhost:8080/game/esrbRating/" + evt.target.value)
+      fetch("https://gamestore-microservice-app.herokuapp.com/game/esrbRating/" + evt.target.value)
         .then((response) => response.json())
         .then((result) => setGames(result))
         .catch(console.log);
@@ -46,7 +46,7 @@ function Game() {
     if (evt.target.value === "") {
       setGames([]);
     } else {
-      fetch("http://localhost:8080/game/studio/" + evt.target.value)
+      fetch("https://gamestore-microservice-app.herokuapp.com/game/studio/" + evt.target.value)
         .then((response) => response.json())
         .then((result) => setGames(result))
         .catch(console.log);
@@ -102,7 +102,7 @@ function Game() {
         return;
       case "add-invoice":
         setInvoice(invoice);
-        fetch("http://localhost:8080/game")
+        fetch("https://gamestore-microservice-app.herokuapp.com/game")
           .then((response) => response.json())
           .then((result) => setGames(result))
           .catch(console.log);
